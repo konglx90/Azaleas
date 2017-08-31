@@ -1,0 +1,12 @@
+{
+  "name": "Azaleas",
+  "version": "1.0.0",
+  "description": "A tiny but powerful UI.",
+  "main": "index.js",
+  "repository": "https://github.com/konglx90/Azaleas.git",
+  "author": "konglingxing <lingxingkong213712@sohu-inc.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "vue": "^2.4.2"
+  }
+}

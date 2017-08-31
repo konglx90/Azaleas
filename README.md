@@ -12,6 +12,16 @@ A tiny, but powerful mobile UI system
 5. 引入单元测试, 优化开发流程
 6. 构建自己的前端技术栈
 
+### TypeScript
+
+为什么选择TypeScript而不是原生的JavaScript？
+
+组件库是提供给别人使用的，基于永远不能相信用户输入的原则，对参数的validate是必不可少的.
+Azaleas 可能越变越大，提前引入静态类型是件好事.
+Azaleas 肯定会被重构，为了避免进入火葬场，早点选TypeScript吧.
+TypeScript is good.
+
+	TypeScript
 	vue2.0
 	Webpack
 	Gulp
