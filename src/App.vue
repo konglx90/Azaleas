@@ -6,7 +6,7 @@
 </template>
 
 <script lang="ts">
-import Hello from './components/Hello/Hello';
+import { Hello } from './components';
 
 export default {
   name: 'app',
