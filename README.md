@@ -38,6 +38,7 @@ For detailed explanation on how things work, checkout the [guide](http://vuejs-t
 6. 构建自己的前端技术栈
 
 ### TypeScript
+
 为什么选择TypeScript而不是原生的JavaScript？
 
 组件库是提供给别人使用的，基于永远不能相信用户输入的原则，对参数的validate是必不可少的.
