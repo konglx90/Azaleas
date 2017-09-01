@@ -1,5 +1,5 @@
 <template>
-  <div class="hello">
+  <div class="azu-hello">
     <h1>{{ msg }}</h1>
     <h2>Essential Links</h2>
     <ul>
@@ -31,7 +31,7 @@ export default class Hello extends Vue {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="less" scoped>
-@import '../../styles/Hello.less';
+@import '../../styles/components/hello.less';
 h1, h2 {
   font-weight: normal;
 }
