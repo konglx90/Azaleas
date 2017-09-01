@@ -11,3 +11,7 @@ new Vue({
   template: '<App/>',
   components: { App },
 });
+
+export default function hello () {
+  console.log('hello')
+}
