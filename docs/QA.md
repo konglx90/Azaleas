@@ -1,16 +1,4 @@
-### JS(TS)(airbnb)
-
-### CSS
-
-全局前缀名, 参考iview[iview](https://github.com/iview/iview/blob/2.0/src/styles/custom.less)的方式
-
-```css
-// Prefix
-@css-prefix             : azu-;
-@css-prefix-iconfont    : azu-icon;
-```
-
-多次在不同文件导入同一个less文件会生成许多`<style></style>`吗?
+### 多次在不同文件导入同一个less文件会生成许多`<style></style>`吗?
 
 1. @import (reference) "文件路径";
 　　将引入的文件作为样式库使用，因此文件中样式不会被直接编译为css样式规则。当前样式文件通过extend和mixins的方式引用样式库的内容。

@@ -32,6 +32,7 @@ export default class Hello extends Vue {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="less" scoped>
 @import '../../styles/components/hello.less';
+
 h1, h2 {
   font-weight: normal;
 }
