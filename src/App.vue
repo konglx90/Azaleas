@@ -2,6 +2,7 @@
   <div id="app">
     <img src="./assets/logo.png">
     <hello></hello>
+    <!-- <toast></toast> -->
   </div>
 </template>
 
@@ -12,6 +13,7 @@ export default {
   name: 'app',
   components: {
     Hello,
+    // Toast,
   },
 };
 </script>

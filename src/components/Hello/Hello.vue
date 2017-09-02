@@ -17,13 +17,19 @@
       <li><a href="http://vue-loader.vuejs.org/" target="_blank">vue-loader</a></li>
       <li><a href="https://github.com/vuejs/awesome-vue" target="_blank">awesome-vue</a></li>
     </ul>
+    <toast />
   </div>
 </template>
 
 <script lang="ts">
 import Vue from 'vue';
 import Component from 'vue-class-component';
-@Component
+import Toast from '../Toast';
+@Component({
+  components: {
+    Toast,
+  },
+})
 export default class Hello extends Vue {
   msg: string = 'this is a typescript project now'
 }
