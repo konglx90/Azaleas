@@ -1,26 +1,56 @@
 ### JS(TS)(airbnb)
 
+#### vue-class-component 书写顺序
+
+```
+import Vue from 'vue'
+import Component from 'vue-class-component'
+
+@Component({
+  props: {
+    propMessage: String
+  }
+})
+export default class App extends Vue {
+  // initial data
+  msg = 123
+
+  // use prop values for initial data
+  helloMsg = 'Hello, ' + this.propMessage
+
+  // lifecycle hook
+  mounted () {
+    this.greet()
+  }
+
+  // computed
+  get computedMsg () {
+    return 'computed ' + this.msg
+  }
+
+  // method
+  greet () {
+    alert('greeting: ' + this.msg)
+  }
+}
+```
+
+@Component
+1. props
+2. components
+
+extends
+1. data
+2. lifecycle hook
+3. computed
+4. method
+
 ### CSS
 
-全局前缀名, 参考iview[iview](https://github.com/iview/iview/blob/2.0/src/styles/custom.less)的方式
+#### 全局前缀名, 参考iview[iview](https://github.com/iview/iview/blob/2.0/src/styles/custom.less)的方式
 
 ```css
 // Prefix
 @css-prefix             : azu-;
 @css-prefix-iconfont    : azu-icon;
 ```
-
-多次在不同文件导入同一个less文件会生成许多`<style></style>`吗?
-
-1. @import (reference) "文件路径";
-　　将引入的文件作为样式库使用，因此文件中样式不会被直接编译为css样式规则。当前样式文件通过extend和mixins的方式引用样式库的内容。
-2. @import (inline) "文件路径";
-　　用于引入与less不兼容的css文件，通过inline配置告知编译器不对引入的文件进行编译处理，直接输出到最终输出。注意：引入的文件和当前文件会被编译为一个样式样式
-3. @import (less) "文件路径";
-　　默认使用该配置项，表示引入的文件为less文件。
-4. @import (css) "文件路径";
-　　表示当前操作为CSS中的@import操作。当前文件会输出一个样式文件，而被引入的文件自身为一个独立的样式文件
-**5. @import (once) "文件路径";**
-　　默认使用该配置项，表示对同一个资源仅引入一次。
-6. @import (multiple) "文件路径";
-　　表示对同一资源可引入多次。

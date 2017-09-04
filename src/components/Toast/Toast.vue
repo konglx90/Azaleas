@@ -32,7 +32,8 @@ export default class Toast extends Vue {
   // inital data
   visible: boolean = true
   // method
-  show () {
+  show (msg: string) {
+    this.msg = msg;
     this.visible = true
     if (this.duration > 0) {
       setTimeout(

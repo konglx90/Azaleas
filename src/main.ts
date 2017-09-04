@@ -3,14 +3,19 @@
 import Vue from 'vue';
 import App from './App';
 
+import toast from './components/Toast';
+
 Vue.config.productionTip = false;
 
 /* eslint-disable no-new */
-new Vue({
+Vue.use(toast);
+const x = new Vue({
   el: '#app',
   template: '<App/>',
   components: { App },
 });
+
+console.log(x);
 
 export default function hello () {
   console.log('hello')
