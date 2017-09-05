@@ -10,42 +10,41 @@
 </template>
 
 <script lang="ts">
-/* eslint-disable */
 import Vue from 'vue';
 import Component from 'vue-class-component';
 
 @Component({
   props: {
     msg: {
-        type: String,
-        default: 'toast'
+      type: String,
+      default: 'toast',
     },
     duration: {
-        type: Number,
-        default: 2000
-    }
-  }
+      type: Number,
+      default: 1000,
+    },
+  },
 })
 export default class Toast extends Vue {
-  msg: string
-  duration: number
+  msg: string;
+  duration: number;
   // inital data
-  visible: boolean = true
+  visible: boolean = true;
   // method
-  show (msg: string) {
+  show(msg: string) {
     this.msg = msg;
-    this.visible = true
+    this.visible = true;
     if (this.duration > 0) {
       setTimeout(
         () => {
-          this.visible = false
+          this.visible = false;
         },
-        this.duration
-      )
+        this.duration,
+      );
     }
   }
-  hide () {
-    this.visible = false
+  hide() {
+    this.visible = false;
   }
 }
 </script>
