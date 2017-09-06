@@ -1,9 +1,5 @@
 import Toast from './Toast';
 
-// export default class Toast extends toast {
-//
-// }
-
 export default {
   /**
    * 每个插件都有的install方法，用于安装插件
@@ -19,7 +15,7 @@ export default {
      * 初始化并显示
      * @returns {Promise} Promise实例
      */
-    function $toast(msg) {
+    function $toast(msg, duration) {
       return new Promise((resolve) => {
         // 第一次调用
         if (!toast) {
@@ -30,7 +26,7 @@ export default {
           document.querySelector(pluginOptions.container || 'body').appendChild(toast.$el);
         }
         // 显示toast
-        toast.show(msg);
+        toast.show(msg, duration);
         resolve();
       });
     }

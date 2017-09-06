@@ -9,13 +9,11 @@ Vue.config.productionTip = false;
 
 /* eslint-disable no-new */
 Vue.use(toast);
-const x = new Vue({
+new Vue({
   el: '#app',
   template: '<App/>',
   components: { App },
 });
-
-console.log(x);
 
 export default function hello () {
   console.log('hello')

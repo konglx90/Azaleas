@@ -54,3 +54,11 @@ extends
 @css-prefix             : azu-;
 @css-prefix-iconfont    : azu-icon;
 ```
+
+### 文档国际化
+
+加入英文文档
+
+### plugin 使用规则
+
+Vue.use 之后包在 $azu namespace 下，如：this.$azu.toast('大家好');

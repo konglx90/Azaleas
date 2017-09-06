@@ -31,8 +31,9 @@ export default class Toast extends Vue {
   // inital data
   visible: boolean = true;
   // method
-  show(msg: string) {
+  show(msg: string, duration: number=this.duration) {
     this.msg = msg;
+    this.duration = duration;
     this.visible = true;
     if (this.duration > 0) {
       setTimeout(
@@ -58,5 +59,4 @@ export default class Toast extends Vue {
 
 <style lang="less">
 @import '../../styles/components/toast.less';
-
 </style>

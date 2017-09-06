@@ -9,3 +9,4 @@
            整合typescript 和 less
 
 2017.09.04 开始开发toast组件
+2017.09.06 优化toast的接口，添加文档

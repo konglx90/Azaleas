@@ -24,7 +24,6 @@
 <script lang="ts">
 import Vue from 'vue';
 import Component from 'vue-class-component';
-// import Toast from '../Toast';
 
 class AzuVue extends Vue {
   $toast: any;
@@ -40,10 +39,7 @@ class AzuVue extends Vue {
 export default class Hello extends AzuVue {
   msg: string = 'this is a typescript project now'
   handleClick() {
-    // this.$azu.toast('大家好');
-    console.log(this.$toast('大家好'));
-    console.log(this.msg);
-    // this.$toast();
+    console.log(this.$toast('大家好', 900));
   }
 }
 </script>
