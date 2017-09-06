@@ -1,4 +1,4 @@
-import Toast from './Toast';
+import Loading from './Loading';
 
 export default {
   /**
@@ -8,39 +8,39 @@ export default {
    */
   install(Vue, pluginOptions = {}) {
     // 创建"子类"方便挂载
-    const VueToast = Vue.extend(Toast);
-    let toast = null;
+    const VueLoading = Vue.extend(Loading);
+    let loading = null;
 
     /**
      * 初始化并显示
      * @returns {Promise} Promise实例
      */
-    function $toast(msg, duration) {
+    function $loading() {
       return new Promise((resolve) => {
         // 第一次调用
-        if (!toast) {
-          toast = new VueToast();
+        if (!loading) {
+          loading = new VueLoading();
           // 手动创建一个未挂载的实例
-          toast.$mount();
+          loading.$mount();
           // 挂载
-          document.querySelector(pluginOptions.container || 'body').appendChild(toast.$el);
+          document.querySelector(pluginOptions.container || 'body').appendChild(loading.$el);
         }
-        // 显示toast
-        toast.show(msg, duration);
+        // 显示loading
+        loading.show();
         resolve();
       });
     }
-    // 定义关闭toast方法
-    $toast.hide = function hide() {
+    // 定义关闭loading方法
+    $loading.hide = function hide() {
       return new Promise((resolve) => {
-        if (!toast || !toast.visible) {
+        if (!loading || !loading.visible) {
           resolve();
           return;
         }
-        toast.hide();
+        loading.hide();
       });
     };
     /* eslint-disable */
-    Vue.toast = Vue.prototype.$toast = $toast
+    Vue.loading = Vue.prototype.$loading = $loading
   },
 };

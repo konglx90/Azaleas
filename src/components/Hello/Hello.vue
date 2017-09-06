@@ -26,7 +26,8 @@ import Vue from 'vue';
 import Component from 'vue-class-component';
 
 class AzuVue extends Vue {
-  $toast: any;
+  // $toast: any;
+  $loading: any;
 }
 // interface AZU {
 //   $azu: string
@@ -39,7 +40,11 @@ class AzuVue extends Vue {
 export default class Hello extends AzuVue {
   msg: string = 'this is a typescript project now'
   handleClick() {
-    console.log(this.$toast('大家好', 900));
+    // console.log(this.$toast('大家好', 900));
+    this.$loading();
+    setTimeout(() => {
+      this.$loading.hide();
+    }, 3000);
   }
 }
 </script>

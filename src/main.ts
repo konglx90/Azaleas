@@ -3,12 +3,14 @@
 import Vue from 'vue';
 import App from './App';
 
-import toast from './components/Toast';
+import Toast from './components/Toast';
+import Loading from './components/Loading';
 
 Vue.config.productionTip = false;
 
 /* eslint-disable no-new */
-Vue.use(toast);
+Vue.use(Toast);
+Vue.use(Loading);
 new Vue({
   el: '#app',
   template: '<App/>',
