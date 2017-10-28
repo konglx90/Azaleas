@@ -5,9 +5,11 @@
 <script lang="ts">
 import Vue from 'vue';
 import Component from 'vue-class-component';
+import Emitter from '../../mixins/emitter';
 
 @Component({
   name: 'azu-option',
+  mixins: [Emitter],
   props: {
     label: {
       type: [String, Number],
@@ -27,6 +29,7 @@ export default class Option extends Vue {
   select() {
     console.log('select');
     this.$emit('on-select-selected', this.value);
+    // this.dispatch('azu-select', 'on-select-selected', this.value);
   }
   blur() {
     this.isFocus = false;
