@@ -28,14 +28,13 @@ export default class Option extends Vue {
   // method
   select() {
     console.log('select');
-    this.$emit('on-select-selected', this.value);
-    // this.dispatch('azu-select', 'on-select-selected', this.value);
+    this.dispatch('azu-select', 'on-select-selected', this.value);
   }
   blur() {
     this.isFocus = false;
   }
   // computed
-  get showLabel() {
+  get showLabel(): string | number {
     return this.label ? this.label : this.value;
   }
 }

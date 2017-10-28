@@ -43,7 +43,7 @@ export default class Select extends Vue {
     this.visible = !this.visible;
   }
   // computed
-  get showLabel() {
+  get showLabel(): string | number {
     return this.label ? this.label : this.value;
   }
   mounted() {
