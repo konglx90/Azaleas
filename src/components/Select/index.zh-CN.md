@@ -9,9 +9,9 @@ title: Select
 
 | 参数        | 说明                                     | 类型        | 默认值 |
 |----------- |----------------------------------------- | ----------  | ------- |
-| value       | 实际值                          | [String|Number]    | `''`  |
-| label  |  显示的值                       | [String|Number]       | `''` |
-| @onChange | value 改变                    | Function |       |  |
+| value       | 实际值                          | String Number   | `''`  |
+| label  |  显示的值                       | String Number      | `''` |
+| @onChange | value 改变                    | Function |        |
 
 ## Usage
 

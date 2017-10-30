@@ -7,11 +7,11 @@ Select by drop down
 
 ## API
 
-| Property        | Description                                     | Type        | Default |
-|----------- |----------------------------------------- | ----------  | ------- |
-| value       | real value                              | [String|Number]    | `''`  |
-| label     |  show in browser                             | [String|Number]       | `''` |
-| @onChange | when value is change to use          | Function |       |  |
+| Property   | Description                         | Type         | Default |
+|----------- |------------------------------------ | -----------  | ------- |
+| value      | real value                          | String Number | `''`  |
+| label      |  show in browser                    | String Number | `''` |
+| @onChange  | when value is change to use         | Function |    |
 
 ## Usage
 
