@@ -1,9 +1,8 @@
 <template>
-    <section :class="prefixCls">
-        <section :class="['azu-select-selection', {[prefixCls + '-show']: visible}]">
+    <section :class="prefixCls" tabIndex="0" @blur="handleBlur">
+        <section :class="['azu-select-selection', {[prefixCls + '-show']: visible}]" @click="toggleMenu">
             <span>{{ showLabel }}</span>
-            <!-- <span @click="toggleMenu">选择</span> -->
-            <i class="ki24 icon24-arrow-down azu-select-arrow" @click="toggleMenu">选择</i>
+            <i class="ki24 icon24-arrow-down azu-select-arrow">选择</i>
         </section>
         <transition name="fadeout">
             <ul v-show="visible" :class="prefixCls + '-options'">
@@ -42,15 +41,21 @@ export default class Select extends Vue {
   toggleMenu() {
     this.visible = !this.visible;
   }
+  hideMenu() {
+    this.visible = false;
+  }
+  handleBlur() {
+    this.hideMenu();
+  }
   // computed
   get showLabel(): string | number {
     return this.label ? this.label : this.value;
   }
   mounted() {
     this.$on('on-select-selected', (value: string | number) => {
-      console.log(value, 'klklklklklkl');
+      this.hideMenu();
+      this.$emit('onChange', value);
     });
-    console.log('klx');
   }
 }
 </script>

@@ -27,7 +27,6 @@ export default class Option extends Vue {
   isFocus: boolean = false;
   // method
   select() {
-    console.log('select');
     this.dispatch('azu-select', 'on-select-selected', this.value);
   }
   blur() {

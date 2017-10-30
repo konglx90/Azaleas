@@ -1,8 +1,8 @@
 <template>
   <div class="azu-hello">
-    <h1>{{ msg }}</h1>
+    <!-- <h1>{{ msg }}</h1> -->
     <!-- My demo -->
-    <ASelect v-model="value" style="width:200px;">
+    <ASelect v-model="value" style="width:200px;" @onChange="handleChange">
         <AOption value="孔令星" />
         <AOption value="孔令星2" />
     </ASelect>
@@ -33,7 +33,9 @@ class AzuVue extends Vue {
 export default class Hello extends AzuVue {
   msg: string = 'this is a typescript project now'
   value: string = '孔令星'
-  label: string = '孔令星'
+  handleChange(value: string) {
+    this.value = value;
+  }
   handleClick() {
     // console.log(this.$toast('大家好', 900));
     this.$loading();
