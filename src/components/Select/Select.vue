@@ -48,7 +48,7 @@ export default class Select extends Vue {
   }
   mounted() {
     this.$on('on-select-selected', (value: string | number) => {
-      this.$emit('onChange', value)
+      this.$emit('onChange', value);
     });
   }
 }

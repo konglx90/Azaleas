@@ -6,7 +6,14 @@
         <AOption value="孔令星" />
         <AOption value="孔令星2" />
     </ASelect>
-    <div>dasdasdas</div>
+    <Waterfall :dataItems="x">
+      <div slot="waterfall">
+        <div v-for="(z, i) in x">
+          <img :src="z.image">
+          {{`zzzzzz${i}`}}
+        </div>
+      </div>
+    </Waterfall>
   </div>
 </template>
 
@@ -16,6 +23,17 @@ import Component from 'vue-class-component';
 
 import AOption from '../Select/Option';
 import ASelect from '../Select/Select';
+
+import Waterfall from '../Waterfall/Waterfall';
+
+/* mock data */
+const x = [
+  { image: 'http://avatars1.githubusercontent.com/u/21078412?v=4' },
+  { image: 'http://avatars1.githubusercontent.com/u/21078412?v=4' },
+  { image: 'http://avatars1.githubusercontent.com/u/21078412?v=4' },
+  { image: 'http://avatars1.githubusercontent.com/u/21078412?v=4' },
+];
+/* mock data end */
 
 class AzuVue extends Vue {
   // $toast: any;
@@ -28,11 +46,13 @@ class AzuVue extends Vue {
   components: {
     AOption,
     ASelect,
+    Waterfall,
   },
 })
 export default class Hello extends AzuVue {
   msg: string = 'this is a typescript project now'
   value: string = '孔令星'
+  x: Array<any> = x;
   handleChange(value: string) {
     this.value = value;
   }
