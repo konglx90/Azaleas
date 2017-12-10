@@ -9,6 +9,5 @@ declare module 'vue/types/vue' {
   interface Vue {
     dispatch: Function,
     broadcast: Function,
-    children: any[any],
   }
 }

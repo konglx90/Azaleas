@@ -54,3 +54,10 @@ TypeScript is good.
 	打包策略
 	目录设计
 	...
+
+### watch
+
+```
+if use typescript>2.6 please set
+"strictFunctionTypes": false,
+```

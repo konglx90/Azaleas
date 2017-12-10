@@ -7,6 +7,7 @@
     "allowJs": true,
     "allowSyntheticDefaultImports": true,
     "experimentalDecorators": true,
+    "strictFunctionTypes": false,
     "lib": [
       "es2017",
       "dom"

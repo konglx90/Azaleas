@@ -30,15 +30,10 @@ const setAbsolute = (dom: any) => {
       type: Array,
       required: true,
     },
-    renewHeight: {
-      type: String,
-      default: '200px',
-    },
   },
 })
 export default class Waterfall extends Vue {
   dataItems: Array<any>;
-  renewHeight: string;
   // inital data
   prefixCls: string = prefixCls;
   contents: any = [];  // HTML type HTMLCollection
