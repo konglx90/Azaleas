@@ -13,6 +13,7 @@ A good mobile UI. 是基于WeUI和Vue(2.x)开发的移动端UI组件库，主要
 ### [publishing-npm-packages](https://docs.npmjs.com/getting-started/publishing-npm-packages)
 
 发布软件前必看
+`npm run pre-publish`
 
 ### [antd](https://github.com/ant-design/ant-design/)
 
