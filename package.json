@@ -3,6 +3,22 @@
   "version": "1.0.1",
   "description": "A tiny but powerful UI.",
   "author": "konglingxing <konglx90@gmail.com>",
+  "homepage": "https://github.com/konglx90/Azaleas",
+  "keywords": [
+      "azaleas",
+      "kuaizhan",
+      "vue",
+      "vue.js",
+      "component",
+      "components",
+      "ui",
+      "framework"
+    ],
+  "main": "dist/azaleas.js",
+  "files": [
+      "dist",
+      "src"
+  ],
   "private": false,
   "scripts": {
     "dev": "node build/dev-server.js",
@@ -93,5 +109,13 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/konglx90/Azaleas.git"
-  }
+    },
+    "license": "MIT",
+    "bugs": {
+      "url": "https://github.com/konglx90/Azaleas/issues"
+      },
+      "engines": {
+      "node": ">= 7.0.0",
+      "npm": ">= 4.0.0"
+    }
 }

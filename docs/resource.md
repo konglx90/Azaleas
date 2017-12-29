@@ -10,6 +10,7 @@ A good mobile UI. 是基于WeUI和Vue(2.x)开发的移动端UI组件库，主要
 ### [vue-class-component](https://github.com/vuejs/vue-class-component#vue-class-component)
 
 ### [packages.json](https://yarn.bootcss.com/docs/package-json.html)
+### [publishing-npm-packages](https://docs.npmjs.com/getting-started/publishing-npm-packages)
 
 发布软件前必看
 
