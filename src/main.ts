@@ -20,3 +20,7 @@ new Vue({
 export default function hello () {
   console.log('hello')
 }
+
+export {
+    Toast,
+}
