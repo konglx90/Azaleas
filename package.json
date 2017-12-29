@@ -1,23 +1,23 @@
 {
   "name": "azaleas",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A tiny but powerful UI.",
   "author": "konglingxing <konglx90@gmail.com>",
   "homepage": "https://github.com/konglx90/Azaleas",
   "keywords": [
-      "azaleas",
-      "kuaizhan",
-      "vue",
-      "vue.js",
-      "component",
-      "components",
-      "ui",
-      "framework"
-    ],
+    "azaleas",
+    "kuaizhan",
+    "vue",
+    "vue.js",
+    "component",
+    "components",
+    "ui",
+    "framework"
+  ],
   "main": "dist/azaleas.js",
   "files": [
-      "dist",
-      "src"
+    "dist",
+    "src"
   ],
   "private": false,
   "scripts": {
@@ -98,8 +98,8 @@
     "webpack-merge": "^4.1.0"
   },
   "engines": {
-    "node": ">= 4.0.0",
-    "npm": ">= 3.0.0"
+    "node": ">= 7.0.0",
+    "npm": ">= 4.0.0"
   },
   "browserslist": [
     "> 1%",
@@ -109,13 +109,9 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/konglx90/Azaleas.git"
-    },
-    "license": "MIT",
-    "bugs": {
-      "url": "https://github.com/konglx90/Azaleas/issues"
-      },
-      "engines": {
-      "node": ">= 7.0.0",
-      "npm": ">= 4.0.0"
-    }
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/konglx90/Azaleas/issues"
+  }
 }
